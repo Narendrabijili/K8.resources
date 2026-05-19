@@ -1,0 +1,57 @@
+🧠 What is Kubernetes?
+
+Kubernetes (K8s) is an open-source container orchestration platform .It will help in 
+
+🔹Deploy containers
+🔹Manage containers
+🔹Scale applications
+🔹Monitor applications
+🔹Recover failed containers automatically
+
+It will do CA management, auto healing ,auto scaling, load balancing ,rolling updates (app updates vthout downtime)
+(K8 will manages CA across automatically multiple m/c.
+In docker every thing we need to do manually .but in k8  have auto healing, auto scaling, load balancing, multi node management, storage management etc.)
+
+
+Companies use K8s for:
+
+High availability
+Automation
+Easy scaling
+Microservices
+Cloud-native applications
+
+Main Components of Kubernetes
+1.Cluster
+2.Node :🔹Master node
+        🔹 Worker node
+Master node : it controls and manages the entire K8 environment.
+ 
+🔹Main Responsibilities
+🔹Manages worker nodes
+🔹Schedules pods
+🔹Monitors cluster health
+🔹Handles API requests
+🔹Maintains desired state
+🔹Performs auto healing.
+
+🔹Worker Node :where application run's.
+
+Note: Cluster group of nodes .1. If user created a request (like create nginx) then it will go API server .
+                              2. API Server is the main entry point of Kubernetes.request valid and  Does user have permission then it will talk to ETCD and Scheduler.
+                              3.ETCD  is Kubernetes database.It stores all cluster information.  Example data stored:Pod details , Node details , Deployment info ,Secrets , Configurations
+                              4. Scheduler mean Which worker node should run the pod .suppose we have 3 worker nodes .then wjich worker node it should run it will decide .
+                                Scheduler checks : CPU availability  , Memory , Free resources depending thise resources the nginx will run on worker nodes.
+Simple flow:
+
+User creates nginx
+        ↓
+API Server receives request
+        ↓
+API Server stores data in ETCD
+        ↓
+Scheduler selects worker node
+        ↓
+Kubelet creates pod
+        ↓
+Nginx container running 
