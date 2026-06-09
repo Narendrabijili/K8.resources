@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: service
+metadata:
+  name: nginx
+  labels:
+    purpose: service-demo
+spec:
+  selector:
+   purpose: service-demo
+   project: reboshop
+   environment: dev
+  ports:
+    - protocal: TCP
+      port: 80 # service port
+      targetPort: 80 # container port
+
+---
+appiVersion: v1
+kind: pod
+metadata:
+  name: nginx
+  lables:
+    purpose: service-demo
+    project: reboshop
+    environment: dev
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    
