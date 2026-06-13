@@ -1,0 +1,13 @@
+appiVersion: v1
+kind: pod
+metadata: 
+  name: labels
+  labels:
+   project: K8S
+   component: mysql
+   tier: backend
+   environment: dev
+spe:
+ containers:
+- name: nginx
+  image: nginx   
