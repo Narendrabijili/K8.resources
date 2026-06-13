@@ -1,0 +1,12 @@
+appiVersion: v1
+kind: pod
+metadata:
+ name: pod-secret
+ labels:
+spec:
+ containers:
+ - name: nginx
+   image: nginx
+   envFrom:
+    - secreatRef:
+        name: pod-secret 
