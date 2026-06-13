@@ -7,7 +7,10 @@ metadata:
    component: mysql
    tier: backend
    environment: dev
+  annotations:
+   description: "This is used for labels and annotataions" 
+   github: "https://github.com/Narendrabijili/K8.resources.git"
 spec:
  containers:
 - name: nginx
-  image: nginx   
+  image: nginx 
