@@ -6,6 +6,6 @@ metadata:
    purpose: config
    env: dev
 data:
-  Course: "devops vth aws"
-  Duration: "120hrs"
-  Teacher: "siva"
+  Course: "devops vth K8S"
+  Duration: "60hrs"
+  Teacher: "Narendra"
